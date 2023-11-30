@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+:root {
+    -dark: #070707;
+    --minimal-dark: #333C44;
+    
+  
+    --dark-green: #3B5A52;
+    --minimal-green: #178A64;
+    --light-green: #14CD59;
+    --aside-activate: #005c07;
+
+    --white : #FFFFFF;
+    --ice-white: #EDF4F5;
+    --minimal-white: #E4E4E4;
+    --gray: #bbbbbb;
+    --border-button: #868686;
+
+    --aside-gradient: linear-gradient(to bottom, var(--minimal-green) 10%, #0C4532 50%);
+    --home-gradient : linear-gradient(to right bottom, var(--dark) 50%, #292929 100%);
+    --button-gradient: linear-gradient(to bottom, var(--dark-green), var(--minimal-dark) 100%);
+ 
+    --weather-today-box-gradient: linear-gradient(to left bottom, #10d38c, #035509 100%);
+    --calender-btn-gradient: linear-gradient(to bottom, #02F091, #0F821C 100%);
+    --weather-box-gradient: linear-gradient(to bottom, #00AD28, #005714);
+
+   
+    --minimal-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+    --search-btn-shadow:  0 5px 10px rgba(0, 0, 0, 0.3);
+    --search-btn-active-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    --search-group-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  
+    --ms-69: 69px;
+
+  
+    --header-after : rgba(0, 0, 0, 0.25);
+}
+
+.ms-69 {
+    margin-left: var(--ms-69) !important;
+}
+
+body {
+  
+    font-family: 'Quicksand', sans-serif !important;
+}

@@ -1,0 +1,286 @@
+@import url(../../components/aside/aside.css);
+@import url(../../components/loader/loader.css);
+
+body {
+    background: var(--home-gradient) !important;
+    min-height: 100vh;
+    display: flex;
+}
+.container-css {
+    width: 100%;
+    max-width: 1920px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 500px;
+    padding: 5px 20px 50px 20px;
+    position: relative;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/header/sunny.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--header-after);
+    z-index: -1;
+}
+.header-question {
+    font-size: 3.8rem;
+    color: var(--ice-white);
+}
+.header-hello-user {
+    font-size: 2.5rem;
+    color: var(--ice-white);
+}
+.header-date {
+    color: var(--gray);
+}
+.header-mouse {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--ice-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--minimal-dark);
+}
+.navbar-brand span:first-child {
+    color: var(--white);
+}
+.navbar-brand span:nth-child(2) {
+    font-weight: lighter;
+}
+.navbar-brand span:nth-child(3) {
+    color: var(--white);
+}
+.navbar-brand span:last-child {
+    font-weight: lighter;
+}
+
+.navbar-nav .nav-item {
+    font-size: 2rem;
+}
+.navbar-nav .nav-item:not(:first-child, .nav-item:nth-child(2)) {
+    margin-top: -1px;
+}
+.navbar-hour, .navbar-nav .nav-item:nth-child(2) span {
+    color: var(--minimal-dark) !important;
+}
+.navbar-nav .nav-item:nth-child(3) , .navbar-nav .nav-item:nth-child(4) {
+    fill: var(--minimal-dark);
+}
+.navbar-nav .nav-item:last-child {
+    cursor: pointer;
+    fill: var(--minimal-dark);
+}
+
+.main {
+    padding: 20px;
+    position: relative;
+}
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to bottom, #3B5A52, #0C1210);
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    z-index: -1;
+}
+
+.main-header-title {
+    color: var(--white);
+    text-transform: capitalize;
+}
+.search-group {
+    border-radius: 8px;
+    box-shadow: var(--search-group-shadow);
+    border: 1px solid var(--border-button);
+    background: var(--dark-green) !important;
+    margin-right: 20px;
+    width: 500px;
+    padding: 1px 5px;
+}
+.search-group span {
+    background: none !important;
+    color: var(--ice-white);
+    border: none;
+    font-size: 1.3rem;
+}
+.search-group input {
+    background: none !important;
+    border: none;
+    box-shadow: none !important;
+    height: 45px;
+    font-size: 1.2rem;
+    color: var(--ice-white) !important;
+}
+.search-group input::placeholder {
+    color: var(--gray);
+    text-transform: capitalize;
+}
+.search-group + button {
+    padding: 5px 30px;
+    height: 45px;
+    border: 1px solid var(--border-button);
+    border-radius: 8px;
+    font-size: 1.3rem;
+     background: var(--minimal-green);
+    color: var(--white);
+    transition: 0.3s;
+    box-shadow:  var(--search-btn-shadow);
+}
+.search-group + button:active {
+    box-shadow: var(--search-btn-active-shadow);
+}
+
+.city-section-title {
+    color: var(--ice-white);
+}
+
+.city-data-wrap {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+}
+.city-weather-week-wrap {
+    width: 100%;
+}
+.weather-titles, .weather-data, .weather-data-dots {
+    color: var(--ice-white);
+}
+.weather-data-dots {
+    font-size: 2rem;
+    cursor: pointer;
+}
+.weather-week-headings {
+    width: 100%;
+    display: flex;
+    color: var(--ice-white);
+    margin-bottom: 30px;
+}
+.weather-week-headings > * {
+    width: 100%;
+    text-align: left;
+}
+.weather-week {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    height: 50px;
+}
+.weather-week.active {
+    background: var(--weather-box-gradient);
+    border-radius: 8px;
+    padding-left: 10px;
+}
+.weather-week.active > * {
+    color: var(--ice-white);
+}
+.weather-week > * {
+    width: 100%;
+    color: var(--light-green);
+    font-size: 1.4rem;
+}
+
+.weather-today-box {
+    width: 450px;
+}
+.weather-today-box-inner {
+    width: 100%;
+    height: 400px;
+    background: var(--weather-today-box-gradient);
+    border-radius: 25px;
+    padding: 25px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.weather-today-box-inner.error {
+    background: #9b2226;
+}
+.weather-icon {
+    margin-left: 10px;
+}
+.weather-today-today {
+    color: var(--ice-white);
+    margin-left: -5px;
+    font-size: 2rem;
+}
+.weather-today-gps, .weather-today-date, .weather-today-temp, .weather-today-day, .weather-today-like {
+    color: var(--ice-white);
+}
+.weather-today-temp {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.calender-btn {
+    border-radius: 17px;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: var(--calender-btn-gradient);
+    color: var(--dark-black);
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.calender-btn:active {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.error-box {
+    background: #9b2226;
+    padding: 13px 10px 13px 15px;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: var(--white);
+    border-radius: 5px;
+}
+.try-again-btn, .request-to-random-city {
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.try-again-btn {
+    margin-right: 10px;
+}
+.request-to-random-city {
+    background: var(--white);
+    color: #9b2226;
+}
+.request-to-random-city:hover {
+    filter: brightness(0.8);
+}
+.try-again-btn:hover {
+    background: #611316;
+}
